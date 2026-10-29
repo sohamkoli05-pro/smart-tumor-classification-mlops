@@ -1,0 +1,10 @@
+﻿stages:
+  train:
+    cmd: python -m src.train
+    deps:
+      - src/train.py
+      - src/data.py
+      - data/breast_cancer.csv
+    outs:
+      - artifacts/best_model.joblib
+      - artifacts/results.json

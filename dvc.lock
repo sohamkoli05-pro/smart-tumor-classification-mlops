@@ -1,0 +1,26 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python -m src.train
+    deps:
+    - path: data/breast_cancer.csv
+      hash: md5
+      md5: 24d9881fad8cfb3d94f5276d372e422b
+      size: 121955
+    - path: src/data.py
+      hash: md5
+      md5: dd80ccff0ef50b9d09ed2838890b172a
+      size: 709
+    - path: src/train.py
+      hash: md5
+      md5: cd523dbf1a7deedfb31b9ca0d8f22432
+      size: 4573
+    outs:
+    - path: artifacts/best_model.joblib
+      hash: md5
+      md5: f37239eabbc92333230c130e1d45ecd4
+      size: 3073
+    - path: artifacts/results.json
+      hash: md5
+      md5: 6a99f64bd03773ba6043135a4c2aec6b
+      size: 569
