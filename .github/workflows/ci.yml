@@ -1,11 +1,12 @@
-```yaml
 name: Smart Tumor MLOps CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   test:
@@ -27,4 +28,3 @@ jobs:
 
       - name: Run API tests
         run: python -m pytest -v
-```
